@@ -29,6 +29,7 @@ struct RatingView: View {
           image(for: number)
             .foregroundStyle(number > rating ? offColor : onColor)
         }
+        .buttonStyle(.plain)
       }
     }
   }
