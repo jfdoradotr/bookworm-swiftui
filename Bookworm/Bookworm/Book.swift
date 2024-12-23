@@ -12,6 +12,7 @@ class Book {
   var genre: String
   var review: String
   var rating: Int
+  var date: Date
 
   init(
     title: String,
@@ -25,5 +26,6 @@ class Book {
     self.genre = genre
     self.review = review
     self.rating = rating
+    self.date = Date.now
   }
 }
