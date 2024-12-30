@@ -29,9 +29,11 @@ struct RatingView: View {
           image(for: number)
             .foregroundStyle(number > rating ? offColor : onColor)
         }
-        .buttonStyle(.plain)
+        .accessibilityLabel("\(number == 1 ? "1 star" : "\(number) stars")")
+        .accessibilityAddTraits(number > rating ? [] : [.isSelected])
       }
     }
+    .buttonStyle(.plain)
   }
 
   func image(for number: Int) -> Image {
